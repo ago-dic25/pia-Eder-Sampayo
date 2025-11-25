@@ -1,0 +1,14 @@
+# Normalizar texto a LF en el repositorio; los editores en Windows pueden usar CRLF localmente
+* text=auto
+*.js text eol=lf
+*.jsx text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.json text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.md text eol=lf
+
+# Excepciones (archivos de Visual Studio que se quieren en CRLF)
+*.sln text eol=crlf
+
