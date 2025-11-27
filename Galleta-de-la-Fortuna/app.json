@@ -7,20 +7,27 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
-    "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "plugins": [
+    "plugins": 
       [
-        "expo-sensors",
-        {
-          "motionPermission": "Allow $(PRODUCT_NAME) to access motion sensors."
-        }
+        [
+          "expo-sensors",
+          {
+            "motionPermission": "Allow $(PRODUCT_NAME) to access motion sensors."
+          }
+        ],
+        [
+          "expo-splash-screen",
+          {
+            "backgroundColor": "#ffd1b5",
+            "image": "./assets/Galleta_abierta-1.png",
+            "dark": {
+              "image": "./assets/Galleta_cerrada-1.png",
+              "backgroundColor": "#3f0b0e"
+            },
+            "resizeMode": "contain"
+          }
+        ]
       ],
-      "expo-audio"
-    ],
     "ios": {
       "supportsTablet": true
     },

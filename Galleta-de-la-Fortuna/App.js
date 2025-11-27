@@ -17,6 +17,7 @@ const cookieCrackSound = require('./assets/Galleta_rompiendo_1.mp3');
 // Paleta de colores de la aplicacion basada en el estado de la galleta
 const idleColor = '#81dcecff';
 const lightShakeColor = '#DEA47E';
+
 const strongShakeColor = '#CD4631';
 
 export default function App() {
@@ -27,7 +28,7 @@ export default function App() {
   const [motionData, setMotionData] = useState(null);
 
   // Configuraciones de la galleta de la fortuna
-  let [hp, setHp] = useState(12);
+  let [hp, setHp] = useState(30);
   const [boxColor, setBoxColor] = useState('skyblue');
   const audioPlayer = useAudioPlayer(cookieCrackSound);
 
@@ -301,7 +302,7 @@ export default function App() {
         />
       </Animated.View>
       <View style={[styles.caja, { backgroundColor: boxColor }]}>
-        <Text style={{ fontSize: 24, fontWeight: 'bold' }}> vida: {hp} </Text>
+        <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#ff7e15ff' }}> {hp} </Text>
       </View>
     </View>
   );
